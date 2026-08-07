@@ -1,31 +1,68 @@
 "use client";
 
-const clients = [
-  { name: "RSUD Dr. Moewardi", initial: "R" }, { name: "UNS Surakarta", initial: "U" },
-  { name: "Pemkot Surakarta", initial: "P" }, { name: "UMS", initial: "U" },
-  { name: "Bank Jateng", initial: "B" }, { name: "Telkom Indonesia", initial: "T" },
-  { name: "Pertamina", initial: "P" }, { name: "PLN", initial: "P" },
+import AnimateOnScroll from "./AnimateOnScroll";
+
+const stats = [
+  { value: "24+", label: "Tahun Pengalaman", suffix: "tahun" },
+  { value: "1.500+", label: "Klien Puas", suffix: "klien" },
+  { value: "5.000+", label: "Unit Terpasang", suffix: "unit" },
+  { value: "50+", label: "Kota di Indonesia", suffix: "kota" },
 ];
 
-export default function ClientLogos() {
-  const doubled = [...clients, ...clients];
+const clients = [
+  "RSUD Dr. Moewardi", "UNS Surakarta", "Pemkot Surakarta", "UMS",
+  "Bank Jateng", "Telkom Indonesia", "Pertamina", "PLN",
+];
+
+export default function TrustSection() {
   return (
-    <section className="py-12 overflow-hidden border-t border-b border-border">
-      <div className="container-tech mb-6"><span className="label text-center block">Dipercaya oleh</span></div>
-      <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-bg to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-bg to-transparent z-10" />
-        <div className="flex gap-4 animate-marquee">
-          {doubled.map((c, i) => (
-            <div key={`${c.name}-${i}`} className="flex-shrink-0 w-40 h-16 border border-border bg-bg-card flex items-center justify-center hover:border-accent transition-colors group">
-              <div className="flex items-center gap-2">
-                <span className="w-7 h-7 rounded bg-surface flex items-center justify-center text-xs font-bold text-accent">{c.initial}</span>
-                <span className="text-[11px] text-text-secondary group-hover:text-text transition-colors">{c.name}</span>
+    <section className="relative overflow-hidden">
+      {/* Top divider with glow */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-elevated via-bg to-bg-elevated" />
+
+      <div className="container-tech relative z-10 py-20 md:py-28">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16 md:mb-20">
+          {stats.map((stat, i) => (
+            <AnimateOnScroll key={stat.label} delay={i * 100}>
+              <div className="text-center p-6 border border-border bg-bg-card/50 hover:border-accent/30 transition-all duration-300 group">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-2 group-hover:scale-105 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="label text-[10px] md:text-xs">{stat.label}</div>
               </div>
-            </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+
+        {/* Client Logos */}
+        <AnimateOnScroll>
+          <div className="text-center mb-8">
+            <span className="label">Dipercaya oleh</span>
+          </div>
+        </AnimateOnScroll>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+          {clients.map((client, i) => (
+            <AnimateOnScroll key={client} delay={i * 60}>
+              <div className="flex items-center justify-center gap-3 p-4 md:p-5 border border-border bg-bg-card/30 hover:border-accent/30 hover:bg-bg-card/60 transition-all duration-300 group">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 flex items-center justify-center flex-shrink-0 group-hover:from-neon-blue/20 group-hover:to-neon-purple/20 transition-all">
+                  <span className="text-sm md:text-base font-bold text-accent">{client.charAt(0)}</span>
+                </div>
+                <span className="text-xs md:text-sm text-text-secondary group-hover:text-text transition-colors font-medium leading-tight">
+                  {client}
+                </span>
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
+
+      {/* Bottom divider with glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
     </section>
   );
 }

@@ -1,11 +1,13 @@
 "use client";
 
+import AnimateOnScroll from "./AnimateOnScroll";
+
 export default function Contact() {
   return (
     <section id="kontak" className="py-20 md:py-32 lg:py-40 bg-bg-elevated">
       <div className="container-tech">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-12">
-          <div className="lg:col-span-5">
+          <AnimateOnScroll className="lg:col-span-5">
             <span className="label block mb-4">Kontak</span>
             <h2 className="heading-lg mb-6">Mari <span className="text-gradient">Terhubung</span></h2>
             <p className="text-text-secondary text-sm mb-8">Tertarik bekerja sama? Hubungi kami.</p>
@@ -41,8 +43,8 @@ export default function Contact() {
                 <div><div className="text-sm text-text">Senin - Sabtu, 08:00 - 17:00 WIB</div><div className="text-xs text-text-muted">Jam Operasional</div></div>
               </div>
             </div>
-          </div>
-          <div className="lg:col-span-7 flex flex-col gap-6">
+          </AnimateOnScroll>
+          <AnimateOnScroll className="lg:col-span-7 flex flex-col gap-6" delay={150}>
             <div className="border border-border overflow-hidden">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1!2d110.8243!3d-7.5755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMzQnMzEuOCJTIDExMMKwNDknMjcuNSJF!5e0!3m2!1sid!2sid!4v1" width="100%" height="250" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale hover:grayscale-0 transition-all duration-500 md:h-[300px]" title="Lokasi Bcompbiz" />
             </div>
@@ -58,7 +60,7 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>

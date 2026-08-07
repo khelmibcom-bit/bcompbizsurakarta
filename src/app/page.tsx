@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Products from "@/components/Products";
 import Services from "@/components/Services";
 import TechStack from "@/components/TechStack";
-import ClientLogos from "@/components/ClientLogos";
+import TrustSection from "@/components/ClientLogos";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -25,7 +25,7 @@ export default function Home() {
         <Products />
         <Services />
         <TechStack />
-        <ClientLogos />
+        <TrustSection />
         <Testimonials />
         <FAQ />
         <CTA />
