@@ -40,8 +40,8 @@ export default function Footer() {
             <span>Software Development Studio &middot; Surakarta, Indonesia</span>
             <div className="flex items-center gap-4">
               <a href="https://wa.me/6281227916969" target="_blank" rel="noopener noreferrer" className="hover:text-neon-blue transition-colors">WhatsApp</a>
-              <a href="mailto:info@bcompbizsurakarta.com" className="hover:text-neon-blue transition-colors">Email</a>
-              <a href="https://bcompbizsurakarta.com" target="_blank" rel="noopener noreferrer" className="hover:text-neon-blue transition-colors">Website Utama</a>
+              <a href="mailto:cs@bcomp-online.id" className="hover:text-neon-blue transition-colors">Email</a>
+              <a href="https://bcomp-online.id" target="_blank" rel="noopener noreferrer" className="hover:text-neon-blue transition-colors">Website Utama</a>
             </div>
           </div>
         </div>

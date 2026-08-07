@@ -12,13 +12,13 @@ export default function Contact() {
             <h2 className="heading-lg mb-6">Mari <span className="text-gradient">Terhubung</span></h2>
             <p className="text-text-secondary text-sm mb-8">Tertarik bekerja sama? Hubungi kami.</p>
             <div className="space-y-5">
-              <a href="mailto:info@bcompbizsurakarta.com" className="flex items-center gap-4 group">
+              <a href="mailto:cs@bcomp-online.id" className="flex items-center gap-4 group">
                 <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-accent transition-colors">
                   <svg className="w-4 h-4 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
                 </div>
-                <div><div className="text-sm text-text group-hover:text-accent transition-colors">info@bcompbizsurakarta.com</div><div className="text-xs text-text-muted">Email</div></div>
+                <div><div className="text-sm text-text group-hover:text-accent transition-colors">cs@bcomp-online.id</div><div className="text-xs text-text-muted">Email</div></div>
               </a>
               <a href="https://wa.me/6281227916969" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-accent transition-colors">
@@ -52,7 +52,7 @@ export default function Contact() {
               {[
                 { name: "Family Health AI", url: "health.khelmi.biz.id", href: "https://health.khelmi.biz.id" },
                 { name: "Ahli Investasi", url: "trade.khelmi.biz.id", href: "https://trade.khelmi.biz.id" },
-                { name: "Bcompbiz Surakarta", url: "bcompbizsurakarta.com", href: "https://bcompbizsurakarta.com" },
+                { name: "Bcompbiz", url: "bcomp-online.id", href: "https://bcomp-online.id" },
               ].map((p) => (
                 <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className="card-tech p-4 group">
                   <div className="text-sm font-medium text-text group-hover:text-accent transition-colors mb-1">{p.name}</div>

@@ -66,7 +66,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
               </a>
-              <a href="https://bcompbizsurakarta.com" target="_blank" rel="noopener noreferrer" className="btn-outline">
+              <a href="https://bcomp-online.id" target="_blank" rel="noopener noreferrer" className="btn-outline">
                 Website Utama
               </a>
             </div>

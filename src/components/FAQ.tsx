@@ -8,7 +8,7 @@ const faqs = [
   { q: "Teknologi apa yang digunakan?", a: "Next.js, React, TypeScript, Tailwind CSS, Prisma ORM, PostgreSQL, dan berbagai AI engine (Gemini, Claude, OpenAI, Grok)." },
   { q: "Apakah Family Health AI gratis?", a: "Ya, tersedia akses gratis sebagai pengguna tamu. Login dengan Google untuk data dan analisis personal." },
   { q: "Apakah Ahli Investasi tersedia di mobile?", a: "Ya, tersedia sebagai aplikasi Android melalui Capacitor." },
-  { q: "Bagaimana cara menghubungi Bcompbiz?", a: "WhatsApp di 0812-2791-6969 atau email info@bcompbizsurakarta.com." },
+  { q: "Bagaimana cara menghubungi Bcompbiz?", a: "WhatsApp di 0812-2791-6969 atau email cs@bcomp-online.id." },
 ];
 
 export default function FAQ() {
