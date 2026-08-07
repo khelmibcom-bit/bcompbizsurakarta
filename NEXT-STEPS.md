@@ -1,215 +1,139 @@
-# NEXT-STEPS.md — Bcompbiz Surakarta Landing Page
+# NEXT-STEPS.md — Bcompbiz Development
 
 **Terakhir diupdate:** 7 Agustus 2026  
-**Status:** Landing page 90% selesai, menunggu data dari user
+**Website:** https://dev.khelmi.biz.id  
+**Repo:** https://github.com/khelmibcom-bit/bcompbizsurakarta  
+**VPS Folder:** /www/wwwroot/dev.khelmi.biz.id  
+**Status:** Landing page 95% selesai, deployed & live
 
 ---
 
-## WAJIB Dikerjakan Sebelum Deploy
+## Sudah Selesai
 
-### 1. Data Kontak (Update di Code)
-
-| Item | File | Baris | Status |
-|------|------|-------|--------|
-| Email perusahaan | `src/components/Contact.tsx` | `contact@bcompbizsurakarta.com` | GANTI |
-| Email perusahaan | `src/components/CTA.tsx` | `contact@bcompbizsurakarta.com` | GANTI |
-| Nomor WhatsApp | `src/components/Contact.tsx` | `628xxxxxxxxxx` | GANTI |
-| Nomor WhatsApp | `src/components/CTA.tsx` | `628xxxxxxxxxx` | GANTI |
-
-**Format WhatsApp:** `628XXXXXXXXXX` (tanpa +, tanpa spasi/tanda hubung)
-
----
-
-### 2. Logo & Branding
-
-| Item | Lokasi File | Status |
-|------|-------------|--------|
-| Logo utama (favicon) | `src/app/favicon.ico` | GANTI |
-| Logo untuk Header | `src/components/Header.tsx` | Perlu ditambahkan `<Image />` |
-| Logo untuk Footer | `src/components/Footer.tsx` | Perlu ditambahkan `<Image />` |
-| Open Graph image | `src/app/layout.tsx` → metadata | BELUM ADA |
-
-**Format yang dibutuhkan:**
-- Favicon: `.ico` atau `.png` 32x32
-- Logo: `.svg` atau `.png` (transparent background)
-- OG Image: `.png` 1200x630
+- [x] Inisialisasi Next.js 16 + Tailwind CSS 4
+- [x] Desain Editorial Luxury (light theme, serif fonts)
+- [x] Semua section: Hero, About, Products, Services, TechStack, Testimonials, FAQ, CTA, Contact
+- [x] Mobile-first responsive design
+- [x] Data kontak asli dari bcompbizsurakarta.com
+- [x] SEO: JSON-LD, sitemap, robots.txt, canonical URL
+- [x] Loading screen, scroll progress, floating WhatsApp
+- [x] Deploy ke VPS (PM2 port 3002 + Nginx proxy)
+- [x] Fix nginx 404 static chunks
+- [x] HTTPS aktif
 
 ---
 
-### 3. Screenshot Produk (Opsional tapi Rekomendasi)
+## Masih Tertunda
+
+### 1. Logo & Branding
 
 | Item | Lokasi | Status |
 |------|--------|--------|
-| Screenshot Family Health AI | `src/components/Products.tsx` | BELUM ADA |
-| Screenshot Ahli Investasi | `src/components/Products.tsx` | BELUM ADA |
+| Logo SVG | `public/favicon.svg` | Ganti dengan logo asli |
+| OG Image | `src/app/layout.tsx` → metadata | Belum ada (1200x630px) |
+| Apple Touch Icon | `public/` | Belum ada |
 
-**Tips:** Ambil screenshot dari production:
-- `https://health.khelmi.biz.id`
-- `https://trade.khelmi.biz.id`
-
----
-
-## DEPLOY ke VPS
-
-### 4. Persiapan VPS
-
-```bash
-# 1. SSH ke VPS
-ssh root@YOUR_VPS_IP
-
-# 2. Pastikan Node.js terinstall (v18+)
-node --version
-
-# 3. Pastikan PM2 terinstall
-pm2 --version
-
-# 4. Buat folder production (jika belum ada)
-mkdir -p /www/wwwroot/bcompbizsurakarta.com
-```
-
-### 5. Upload Code ke VPS
-
-```bash
-# Opsi A: Git (rekomendasi)
-# Di VPS:
-cd /www/wwwroot/bcompbizsurakarta.com
-git clone https://github.com/khelmibcom-bit/bcompbizsurakarta.git .
-```
-
-```bash
-# Opsi B: SCP/SFTP (tanpa git)
-# Di lokal:
-scp -r E:\bcompbizsurakarta\* root@YOUR_VPS_IP:/www/wwwroot/bcompbizsurakarta.com/
-```
-
-### 6. Install & Build di VPS
-
-```bash
-cd /www/wwwroot/bcompbizsurakarta.com
-npm install
-npm run build
-```
-
-### 7. Setup PM2
-
-Buat file `ecosystem.config.js`:
-
-```javascript
-module.exports = {
-  apps: [{
-    name: 'bcompbizsurakarta',
-    script: 'node_modules/.bin/next',
-    args: 'start',
-    cwd: '/www/wwwroot/bcompbizsurakarta.com',
-    instances: 1,
-    autorestart: true,
-    watch: false,
-    max_memory_restart: '1G',
-    env: {
-      NODE_ENV: 'production',
-      PORT: 3000,
-    },
-  }],
-};
-```
-
-```bash
-pm2 start ecosystem.config.js
-pm2 save
-pm2 startup
-```
-
-### 8. Setup Nginx
-
-Buat config di `/www/server/panel/vhost/nginx/bcompbizsurakarta.com.conf`:
-
-```nginx
-server {
-    listen 80;
-    server_name bcompbizsurakarta.com www.bcompbizsurakarta.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
-
-```bash
-nginx -t
-nginx -s reload
-```
-
-### 9. SSL Certificate
-
-```bash
-# Via BT Panel atau certbot:
-certbot --nginx -d bcompbizsurakarta.com -d www.bcompbizsurakarta.com
-```
+**Yang dibutuhkan:**
+- File logo SVG/PNG (transparent background)
+- OG Image 1200x630 untuk social sharing (WhatsApp, Facebook, LinkedIn)
 
 ---
 
-## SETELAH Deploy
+### 2. Screenshot Produk (Opsional)
 
-### 10. Verifikasi
+| Item | Lokasi | Status |
+|------|--------|--------|
+| Screenshot Family Health AI | `src/components/Products.tsx` | Belum ada |
+| Screenshot Ahli Investasi | `src/components/Products.tsx` | Belum ada |
 
-| Checklist | URL | Status |
-|-----------|-----|--------|
-| Website bisa diakses | `https://bcompbizsurakarta.com` | [ ] |
-| HTTPS aktif | `https://bcompbizsurakarta.com` | [ ] |
-| Mobile responsive | Chrome DevTools | [ ] |
-| Semua link berfungsi | Klik semua link | [ ] |
-| WhatsApp link benar | Klik tombol WhatsApp | [ ] |
-| Email link benar | Klik tombol email | [ ] |
-| OG image tampil | Share ke WhatsApp/social media | [ ] |
+Sumber:
+- https://health.khelmi.biz.id
+- https://trade.khelmi.biz.id
 
-### 11. SEO Dasar
+---
+
+### 3. Referensi Desain
+
+Anda akan memberikan referensi website untuk dianalisa dan diadopsi desainnya.
+
+---
+
+### 4. SEO & Analytics
 
 | Item | Status |
 |------|--------|
-| Submit ke Google Search Console | [ ] |
-| Submit sitemap (`/sitemap.xml`) | [ ] |
-| Daftar ke Google My Business | [ ] |
-| Test Rich Snippets | [ ] |
+| Submit ke Google Search Console | Belum |
+| Submit sitemap ke GSC | Belum |
+| Pasang Google Analytics / Plausible | Belum |
+| Test Rich Snippets | Belum |
+| Daftar Google My Business | Belum |
 
 ---
 
-## OPSIONAL — Enhancement
-
-### Fitur Tambahan (Bisa Kapan Saja)
+### 5. Optimasi Lanjutan (Opsional)
 
 | Fitur | Prioritas | Estimasi |
 |-------|-----------|----------|
-| Tambah animasi scroll (Framer Motion) | Tinggi | 2 jam |
-| Tambah section Testimoni | Sedang | 1 jam |
-| Tambah section FAQ | Sedang | 1 jam |
-| Tambah blog/articles page | Rendah | 4 jam |
-| Tambah dark/light mode toggle | Rendah | 2 jam |
-| Tambah analytics (Google Analytics / Plausible) | Tinggi | 30 menit |
-| Tambah contact form (Formspree / custom API) | Sedang | 2 jam |
-| Tambah loading screen / skeleton | Rendah | 1 jam |
+| Google Analytics / Plausible | Tinggi | 30 menit |
+| Contact form (Formspree / custom API) | Sedang | 2 jam |
+| Dark/light mode toggle | Rendah | 2 jam |
+| Blog/articles page | Rendah | 4 jam |
 
 ---
 
-## DATA YANG SAYA BUTUHKAN DARI ANDA
+## Deploy Workflow
 
-Mohon kirimkan data berikut agar saya bisa update code:
+### Update dari Lokal ke VPS
 
-1. **Email perusahaan** — alamat email yang ingin ditampilkan
-2. **Nomor WhatsApp** — format `628XXXXXXXXXX`
-3. **Logo** — file logo (SVG/PNG/ICO)
-4. **Screenshot produk** — (opsional) screenshot Family Health AI & Ahli Investasi
-5. **Akses VPS** — IP, username, password/key (untuk deploy)
-6. **Nama domain** — sudah pointing ke VPS atau belum?
+```bash
+# Di lokal:
+git add .
+git commit -m "type(scope): deskripsi"
+git push origin master
+
+# Di VPS (otomatis via SSH):
+ssh vps-saya "cd /www/wwwroot/dev.khelmi.biz.id && git pull origin master && rm -rf .next && npm run build && pm2 restart bcompbiz"
+```
+
+### Port & Service
+
+| Service | Port | PM2 Name |
+|---------|------|----------|
+| Bcompbiz (dev.khelmi.biz.id) | 3002 | bcompbiz |
+| Family Health AI (health.khelmi.biz.id) | 3001 | family-health-ai |
+| Ahli Investasi (trade.khelmi.biz.id) | 3000 | khelmi-biz |
+
+### Nginx Config
+
+Lokasi: `/www/server/panel/vhost/nginx/dev.khelmi.biz.id.conf`
+
+```nginx
+location / {
+    proxy_pass http://127.0.0.1:3002;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_cache_bypass $http_upgrade;
+}
+```
+
+---
+
+## Data Kontak (Sudah Terpasang)
+
+| Data | Nilai |
+|------|-------|
+| WhatsApp | 0812-2791-6969 |
+| Email | info@bcompbizsurakarta.com |
+| Alamat | Cluster Grand Permata Blok Ruby No 70, Gajahan, Karanganyar, Surakarta 57716 |
+| Maps | -7.5755, 110.8243 |
+| Jam Operasional | Senin-Sabtu 08:00-17:00 WIB |
 
 ---
 
 **Dibuat oleh:** OpenCode AI Assistant  
-**Tanggal:** 7 Agustus 2026
+**Terakhir diupdate:** 7 Agustus 2026
