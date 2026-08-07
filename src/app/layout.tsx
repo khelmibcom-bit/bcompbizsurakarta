@@ -61,16 +61,27 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Bcompbiz",
+  alternateName: "Bcompbiz Surakarta",
   url: "https://dev.khelmi.biz.id",
   description:
-    "Studio pengembangan perangkat lunak dari Indonesia. Spesialis AI, web app, dan mobile development.",
+    "Perusahaan teknologi dari Surakarta. Spesialis AI, web app, dan mobile development. Berdiri sejak 2000.",
+  telephone: "+6281227916969",
+  email: "info@bcompbizsurakarta.com",
+  foundingDate: "2000",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Surakarta",
-    addressRegion: "Jawa Tengah",
+    streetAddress: "Cluster Grand Permata Blok Ruby No 70",
+    addressLocality: "Karanganyar",
+    addressRegion: "Surakarta",
     addressCountry: "ID",
+    postalCode: "57716",
   },
-  sameAs: [],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -7.5755,
+    longitude: 110.8243,
+  },
+  sameAs: ["https://bcompbizsurakarta.com", "https://wa.me/6281227916969"],
   makesOffer: [
     {
       "@type": "Offer",

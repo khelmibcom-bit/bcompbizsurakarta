@@ -52,15 +52,15 @@ export default function About() {
               <span className="gradient-text">Perangkat Lunak</span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Bcompbiz adalah studio pengembangan perangkat lunak dari
-              Indonesia. Kami berfokus pada pembuatan solusi digital yang
-              menggabungkan kecerdasan buatan dengan desain yang elegan untuk
-              mengatasi tantangan nyata.
+              Bcompbiz adalah perusahaan teknologi dari Surakarta yang telah
+              berdiri sejak tahun 2000. Dengan pengalaman lebih dari 24 tahun,
+              kami melayani 1.500+ klien dengan 5.000+ unit produk terpasang di
+              seluruh Indonesia.
             </p>
             <p className="text-slate-400 leading-relaxed mb-8">
-              Dari platform kesehatan preventif hingga dashboard investasi
-              real-time, setiap produk kami dibangun dengan teknologi terkini dan
-              dedikasi terhadap kualitas tertinggi.
+              Divisi pengembangan perangkat lunak kami berfokus pada solusi
+              digital berbasis AI, dari platform kesehatan preventif hingga
+              dashboard investasi real-time.
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center border border-neon-blue/20">

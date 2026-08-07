@@ -97,10 +97,10 @@ export default function Hero() {
           style={{ animationDelay: "0.5s" }}
         >
           {[
-            { value: "2+", label: "Produk Aktif" },
-            { value: "100%", label: "Bahasa Indonesia" },
+            { value: "24+", label: "Tahun Pengalaman" },
+            { value: "1.500+", label: "Klien Puas" },
+            { value: "5.000+", label: "Unit Terpasang" },
             { value: "AI", label: "Powered Solutions" },
-            { value: "24/7", label: "Monitoring" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">

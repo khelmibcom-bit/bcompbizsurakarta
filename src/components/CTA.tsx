@@ -37,14 +37,14 @@ export default function CTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:contact@bcompbiz.id"
+                href="mailto:info@bcompbizsurakarta.com"
                 className="group relative px-8 py-3.5 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-neon-blue to-neon-purple hover:shadow-xl hover:shadow-neon-blue/25 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Kirim Email
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
               </a>
               <a
-                href="https://wa.me/628xxxxxxxxxx"
+                href="https://wa.me/6281227916969"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3.5 text-sm font-semibold text-slate-300 rounded-full glass hover:text-white hover:border-green-500/30 transition-all duration-300 flex items-center gap-2"

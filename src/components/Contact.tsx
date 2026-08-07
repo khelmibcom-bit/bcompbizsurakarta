@@ -18,13 +18,12 @@ export default function Contact() {
             </h2>
             <p className="text-slate-400 leading-relaxed mb-8">
               Tertarik bekerja sama atau ingin mengetahui lebih lanjut tentang
-              produk kami? Jangan ragu untuk menghubungi kami melalui channel
-              di bawah ini.
+              produk kami? Jangan ragu untuk menghubungi kami.
             </p>
 
             <div className="space-y-5">
               <a
-                href="mailto:contact@bcompbiz.id"
+                href="mailto:info@bcompbizsurakarta.com"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 flex items-center justify-center text-neon-blue border border-neon-blue/10 group-hover:border-neon-blue/30 transition-colors">
@@ -34,14 +33,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-white group-hover:text-neon-blue transition-colors">
-                    contact@bcompbiz.id
+                    info@bcompbizsurakarta.com
                   </div>
                   <div className="text-xs text-slate-500">Email</div>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/628xxxxxxxxxx"
+                href="https://wa.me/6281227916969"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -53,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-white group-hover:text-green-400 transition-colors">
-                    +62 8XX-XXXX-XXXX
+                    0812-2791-6969
                   </div>
                   <div className="text-xs text-slate-500">WhatsApp</div>
                 </div>
@@ -68,30 +67,62 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-white">
-                    Surakarta, Jawa Tengah
+                    Cluster Grand Permata Blok Ruby No 70
                   </div>
-                  <div className="text-xs text-slate-500">Indonesia</div>
+                  <div className="text-xs text-slate-500">
+                    Gajahan, Karanganyar, Surakarta 57716
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500/10 to-orange-500/10 flex items-center justify-center text-amber-400 border border-amber-500/10">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    Senin - Sabtu, 08:00 - 17:00 WIB
+                  </div>
+                  <div className="text-xs text-slate-500">Jam Operasional</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Quick Links */}
-          <div className="flex flex-col justify-center">
-            <div className="glass-card rounded-xl p-8">
-              <h3 className="text-lg font-semibold text-white mb-6">
+          {/* Right: Map + Products */}
+          <div className="flex flex-col gap-6">
+            {/* Google Maps */}
+            <div className="glass-card rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1!2d110.8243!3d-7.5755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMzQnMzEuOCJTIDExMMKwNDknMjcuNSJF!5e0!3m2!1sid!2sid!4v1"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
+                title="Lokasi Bcompbiz Surakarta"
+              />
+            </div>
+
+            {/* Products */}
+            <div className="glass-card rounded-xl p-6">
+              <h3 className="text-base font-semibold text-white mb-4">
                 Produk Kami
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <a
                   href="https://health.khelmi.biz.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-4 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-emerald-500/20 transition-colors group"
+                  className="flex items-center justify-between p-3 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-emerald-500/20 transition-colors group"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center text-emerald-400">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center text-emerald-400">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                       </svg>
                     </div>
@@ -99,9 +130,7 @@ export default function Contact() {
                       <div className="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">
                         Family Health AI
                       </div>
-                      <div className="text-xs text-slate-500">
-                        health.khelmi.biz.id
-                      </div>
+                      <div className="text-[11px] text-slate-500">health.khelmi.biz.id</div>
                     </div>
                   </div>
                   <svg className="w-4 h-4 text-slate-600 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -113,11 +142,11 @@ export default function Contact() {
                   href="https://trade.khelmi.biz.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-4 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-amber-500/20 transition-colors group"
+                  className="flex items-center justify-between p-3 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-amber-500/20 transition-colors group"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center text-amber-400">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center text-amber-400">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                       </svg>
                     </div>
@@ -125,12 +154,34 @@ export default function Contact() {
                       <div className="text-sm font-medium text-white group-hover:text-amber-400 transition-colors">
                         Ahli Investasi
                       </div>
-                      <div className="text-xs text-slate-500">
-                        trade.khelmi.biz.id
-                      </div>
+                      <div className="text-[11px] text-slate-500">trade.khelmi.biz.id</div>
                     </div>
                   </div>
                   <svg className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://bcompbizsurakarta.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3 rounded-lg bg-white/[0.03] border border-white/[0.05] hover:border-neon-blue/20 transition-colors group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-neon-blue">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium text-white group-hover:text-neon-blue transition-colors">
+                        Bcompbiz Surakarta
+                      </div>
+                      <div className="text-[11px] text-slate-500">bcompbizsurakarta.com</div>
+                    </div>
+                  </div>
+                  <svg className="w-4 h-4 text-slate-600 group-hover:text-neon-blue transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </a>
