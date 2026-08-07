@@ -56,32 +56,6 @@ export default function ScrollBackground() {
         }}
       />
 
-      {/* Animated gradient bars (Microsoft-style) */}
-      <div
-        className="absolute left-0 right-0 h-[2px]"
-        style={{
-          top: `${20 + (scrollY * 0.1) % 60}%`,
-          background: "linear-gradient(90deg, transparent 0%, rgba(79,143,255,0.4) 30%, rgba(139,92,246,0.4) 70%, transparent 100%)",
-          opacity: 0.6,
-        }}
-      />
-      <div
-        className="absolute left-0 right-0 h-[1px]"
-        style={{
-          top: `${50 + (scrollY * 0.08) % 40}%`,
-          background: "linear-gradient(90deg, transparent 0%, rgba(6,214,214,0.3) 50%, transparent 100%)",
-          opacity: 0.5,
-        }}
-      />
-      <div
-        className="absolute left-0 right-0 h-[1px]"
-        style={{
-          top: `${75 + (scrollY * 0.12) % 25}%`,
-          background: "linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.3) 40%, rgba(79,143,255,0.3) 60%, transparent 100%)",
-          opacity: 0.4,
-        }}
-      />
-
       {/* Grid pattern that shifts */}
       <div
         className="absolute inset-0"
