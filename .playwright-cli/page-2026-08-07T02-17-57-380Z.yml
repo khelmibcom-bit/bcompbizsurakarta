@@ -1,0 +1,264 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "B Bcompbiz" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e6]: B
+        - text: Bcompbiz
+      - navigation [ref=e7]:
+        - link "Tentang" [ref=e8] [cursor=pointer]:
+          - /url: "#tentang"
+        - link "Produk" [ref=e9] [cursor=pointer]:
+          - /url: "#produk"
+        - link "Layanan" [ref=e10] [cursor=pointer]:
+          - /url: "#layanan"
+        - link "Kontak" [ref=e11] [cursor=pointer]:
+          - /url: "#kontak"
+      - link "Hubungi Kami" [ref=e13] [cursor=pointer]:
+        - /url: "#kontak"
+      - button "Toggle menu" [ref=e14]
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: Software Development Studio · Surakarta, Indonesia
+      - heading "Membangun Masa Depan Digital" [level=1] [ref=e20]: Membangun Masa DepanDigital
+      - paragraph [ref=e21]: Kami merancang dan membangun solusi perangkat lunak inovatif yang memberdayakan bisnis dan individu. Dari kecerdasan buatan hingga aplikasi web modern, kami wujudkan visi digital Anda.
+      - generic [ref=e22]:
+        - link "Lihat Produk Kami" [ref=e23] [cursor=pointer]:
+          - /url: "#produk"
+        - link "Pelajari Lebih Lanjut" [ref=e24] [cursor=pointer]:
+          - /url: "#tentang"
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: 24+
+          - generic [ref=e28]: Tahun Pengalaman
+        - generic [ref=e29]:
+          - generic [ref=e30]: 1.500+
+          - generic [ref=e31]: Klien Puas
+        - generic [ref=e32]:
+          - generic [ref=e33]: 5.000+
+          - generic [ref=e34]: Unit Terpasang
+        - generic [ref=e35]:
+          - generic [ref=e36]: AI
+          - generic [ref=e37]: Powered Solutions
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - text: Tentang Kami
+        - heading "Studio Pengembangan Perangkat Lunak" [level=2] [ref=e42]: Studio PengembanganPerangkat Lunak
+        - paragraph [ref=e43]: Bcompbiz adalah perusahaan teknologi dari Surakarta yang telah berdiri sejak tahun 2000. Dengan pengalaman lebih dari 24 tahun, kami melayani 1.500+ klien dengan 5.000+ unit produk terpasang di seluruh Indonesia.
+        - paragraph [ref=e44]: Divisi pengembangan perangkat lunak kami berfokus pada solusi digital berbasis AI, dari platform kesehatan preventif hingga dashboard investasi real-time.
+        - generic [ref=e49]:
+          - generic [ref=e50]: Berkantor di Surakarta
+          - generic [ref=e51]: Jawa Tengah, Indonesia
+      - generic [ref=e52]:
+        - generic [ref=e57]:
+          - heading "Inovasi Berkelanjutan" [level=3] [ref=e58]
+          - paragraph [ref=e59]: Kami terus mengeksplorasi teknologi terdepan seperti AI, machine learning, dan cloud computing untuk menciptakan solusi yang relevan dan berdampak.
+        - generic [ref=e64]:
+          - heading "Berpusat pada Pengguna" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Setiap produk kami dirancang dengan mengutamakan pengalaman pengguna. Interface intuitif dan performa cepat adalah standar, bukan fitur tambahan.
+        - generic [ref=e71]:
+          - heading "Keamanan & Kualitas" [level=3] [ref=e72]
+          - paragraph [ref=e73]: Kode bersih, arsitektur terstruktur, dan keamanan berlapis. Kami menerapkan standar industri tertinggi di setiap lini produk.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - text: Produk Kami
+        - heading "Solusi Digital Nyata" [level=2] [ref=e77]
+        - paragraph [ref=e78]: Dua produk unggulan yang telah live dan digunakan, dibangun dengan teknologi terkini dan arsitektur yang solid.
+      - generic [ref=e79]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e88]:
+              - heading "Family Health AI" [level=3] [ref=e89]
+              - paragraph [ref=e90]: Platform Kesehatan Preventif Berbasis AI
+            - paragraph [ref=e91]: Platform kesehatan preventif personal yang menggunakan kecerdasan buatan untuk memantau, menganalisis, dan memberikan rekomendasi kesehatan proaktif untuk seluruh keluarga.
+            - generic [ref=e92]: Next.js 15TypeScriptPrismaPostgreSQLAI/ML
+            - link "Kunjungi Produk" [ref=e93] [cursor=pointer]:
+              - /url: https://health.khelmi.biz.id
+          - generic [ref=e96]:
+            - heading "Fitur Utama" [level=4] [ref=e97]
+            - generic [ref=e98]:
+              - generic [ref=e99]: Health Score real-time (0-100)
+              - generic [ref=e102]: Analisis hasil lab via OCR
+              - generic [ref=e105]: Deteksi risiko dini berbasis AI
+              - generic [ref=e108]: Tren kesehatan bulanan
+              - generic [ref=e111]: AI Chat konsultasi kesehatan
+              - generic [ref=e114]: Daily & Weekly briefing otomatis
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e125]:
+              - heading "Ahli Investasi" [level=3] [ref=e126]
+              - paragraph [ref=e127]: Dashboard Investasi Real-Time dengan Multi-AI
+            - paragraph [ref=e128]: Platform dashboard investasi cerdas yang mengorkestrasi multiple AI engine (Gemini, Claude, OpenAI, Grok) untuk analisis pasar kripto dan saham secara real-time.
+            - generic [ref=e129]: Next.js 16TypeScriptPrismaNeonCapacitor
+            - link "Kunjungi Produk" [ref=e130] [cursor=pointer]:
+              - /url: https://trade.khelmi.biz.id
+          - generic [ref=e133]:
+            - heading "Fitur Utama" [level=4] [ref=e134]
+            - generic [ref=e135]:
+              - generic [ref=e136]: Multi-AI consensus (4 engine)
+              - generic [ref=e139]: Dashboard kripto & saham IDX/US
+              - generic [ref=e142]: Portfolio Doctor & Risk Score
+              - generic [ref=e145]: Trading Journal + OCR import
+              - generic [ref=e148]: Market Timing Agent
+              - generic [ref=e151]: Backtesting & Position Sizing
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - text: Layanan
+        - heading "Keahlian Teknis" [level=2] [ref=e157]
+        - paragraph [ref=e158]: Stack teknologi modern dan praktik terbaik industri yang kami terapkan di setiap produk.
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - heading "Kecerdasan Buatan" [level=3] [ref=e164]
+          - paragraph [ref=e165]: Integrasi AI yang cerdas untuk analisis data, prediksi, dan automasi. Mendukung multiple AI engine seperti Gemini, Claude, OpenAI, dan Grok.
+        - generic [ref=e166]:
+          - heading "Web Application" [level=3] [ref=e170]
+          - paragraph [ref=e171]: Aplikasi web modern dengan Next.js, React, dan TypeScript. Server-side rendering, performa optimal, dan SEO-friendly.
+        - generic [ref=e172]:
+          - heading "Mobile Development" [level=3] [ref=e176]
+          - paragraph [ref=e177]: Aplikasi mobile cross-platform dengan Capacitor. Deploy ke Play Store dan App Store dari satu codebase.
+        - generic [ref=e178]:
+          - heading "Database & Backend" [level=3] [ref=e182]
+          - paragraph [ref=e183]: Arsitektur backend yang robust dengan PostgreSQL, Prisma ORM, dan Neon serverless. Skalabel dan aman.
+        - generic [ref=e184]:
+          - heading "Performa & Optimasi" [level=3] [ref=e188]
+          - paragraph [ref=e189]: Core Web Vitals optimal, lazy loading, caching strategy, dan CDN. Website cepat adalah standar kami.
+        - generic [ref=e190]:
+          - heading "Keamanan" [level=3] [ref=e194]
+          - paragraph [ref=e195]: Autentikasi JWT, rate limiting, input validation, dan security headers. Keamanan berlapis di setiap layer.
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - text: Tech Stack
+        - heading "Teknologi yang Kami Gunakan" [level=2] [ref=e199]
+      - generic [ref=e200]:
+        - generic [ref=e201]: Next.jsFramework
+        - generic [ref=e202]: ReactUI Library
+        - generic [ref=e203]: TypeScriptLanguage
+        - generic [ref=e204]: Tailwind CSSStyling
+        - generic [ref=e205]: PrismaORM
+        - generic [ref=e206]: PostgreSQLDatabase
+        - generic [ref=e207]: NeonServerless DB
+        - generic [ref=e208]: NextAuthAuthentication
+        - generic [ref=e209]: VercelDeployment
+        - generic [ref=e210]: PM2Process Manager
+        - generic [ref=e211]: CapacitorMobile
+        - generic [ref=e212]: ZodValidation
+        - generic [ref=e213]: VitestTesting
+        - generic [ref=e214]: PlaywrightE2E Testing
+        - generic [ref=e215]: Gemini AIAI Engine
+        - generic [ref=e216]: Claude AIAI Engine
+        - generic [ref=e217]: OpenAIAI Engine
+        - generic [ref=e218]: GrokAI Engine
+    - generic [ref=e220]:
+      - generic [ref=e221]:
+        - text: Testimoni
+        - heading "Apa Kata Mereka" [level=2] [ref=e222]
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - blockquote [ref=e236]: “Family Health AI membantu saya memantau kesehatan keluarga dengan lebih mudah. Analisis lab yang otomatis sangat menghemat waktu.”
+          - generic [ref=e237]:
+            - generic [ref=e238]: P
+            - generic [ref=e239]:
+              - generic [ref=e240]: Pengguna Family Health AI
+              - generic [ref=e241]: Healthcare Platform · Family Health AI
+        - generic [ref=e242]:
+          - blockquote [ref=e254]: “Dashboard investasi yang sangat lengkap. Multi-AI consensus memberikan perspektif analisis yang beragam dan akurat.”
+          - generic [ref=e255]:
+            - generic [ref=e256]: P
+            - generic [ref=e257]:
+              - generic [ref=e258]: Pengguna Ahli Investasi
+              - generic [ref=e259]: Investment Platform · Ahli Investasi
+        - generic [ref=e260]:
+          - blockquote [ref=e272]: “Arsitektur yang solid dan performa yang cepat. Bcompbiz benar-benar memahami standar pengembangan modern.”
+          - generic [ref=e273]:
+            - generic [ref=e274]: T
+            - generic [ref=e275]:
+              - generic [ref=e276]: Technical Review
+              - generic [ref=e277]: Software Quality · General
+    - generic [ref=e279]:
+      - generic [ref=e280]:
+        - text: FAQ
+        - heading "Pertanyaan yang Sering Diajukan" [level=2] [ref=e281]
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - button "Apa itu Bcompbiz?" [ref=e284]
+          - paragraph [ref=e288]: Bcompbiz adalah studio pengembangan perangkat lunak dari Indonesia yang berfokus pada pembuatan solusi digital inovatif berbasis kecerdasan buatan (AI). Kami membangun produk-produk seperti Family Health AI dan Ahli Investasi.
+        - generic [ref=e289]:
+          - button "Teknologi apa yang digunakan Bcompbiz?" [ref=e290]
+          - paragraph [ref=e294]: Kami menggunakan stack modern seperti Next.js, React, TypeScript, Tailwind CSS, Prisma ORM, PostgreSQL, dan berbagai AI engine (Gemini, Claude, OpenAI, Grok). Semua produk kami dibangun dengan standar industri tertinggi.
+        - generic [ref=e295]:
+          - button "Apakah Family Health AI bisa digunakan gratis?" [ref=e296]
+          - paragraph [ref=e300]: Ya, Family Health AI menyediakan akses gratis sebagai pengguna tamu. Anda juga bisa login dengan Google untuk menyimpan data kesehatan dan mendapatkan analisis yang lebih personal.
+        - generic [ref=e301]:
+          - button "Apakah Ahli Investasi tersedia di mobile?" [ref=e302]
+          - paragraph [ref=e306]: Ya, Ahli Investasi tersedia sebagai aplikasi Android melalui Capacitor. Aplikasi ini sedang dalam proses review untuk Play Store.
+        - generic [ref=e307]:
+          - button "Bagaimana cara menghubungi Bcompbiz?" [ref=e308]
+          - paragraph [ref=e312]: Anda bisa menghubungi kami melalui email di contact@bcompbiz.id atau WhatsApp. Silakan scroll ke bagian kontak di bawah halaman ini.
+    - generic [ref=e316]:
+      - heading "Punya Ide Proyek?" [level=2] [ref=e317]
+      - paragraph [ref=e318]: Mari diskusikan bagaimana kami dapat membantu mewujudkan visi digital Anda. Dari konsep hingga deployment, kami siap menjadi mitra teknologi Anda.
+      - generic [ref=e319]:
+        - link "Kirim Email" [ref=e320] [cursor=pointer]:
+          - /url: mailto:info@bcompbizsurakarta.com
+        - link "Chat WhatsApp" [ref=e321] [cursor=pointer]:
+          - /url: https://wa.me/6281227916969
+    - generic [ref=e326]:
+      - generic [ref=e327]:
+        - text: Kontak
+        - heading "Mari Terhubung" [level=2] [ref=e328]
+        - paragraph [ref=e329]: Tertarik bekerja sama atau ingin mengetahui lebih lanjut tentang produk kami? Jangan ragu untuk menghubungi kami.
+        - generic [ref=e330]:
+          - link "info@bcompbizsurakarta.com Email" [ref=e331] [cursor=pointer]:
+            - /url: mailto:info@bcompbizsurakarta.com
+            - generic [ref=e335]:
+              - generic [ref=e336]: info@bcompbizsurakarta.com
+              - generic [ref=e337]: Email
+          - link "0812-2791-6969 WhatsApp" [ref=e338] [cursor=pointer]:
+            - /url: https://wa.me/6281227916969
+            - generic [ref=e342]:
+              - generic [ref=e343]: 0812-2791-6969
+              - generic [ref=e344]: WhatsApp
+          - generic [ref=e350]:
+            - generic [ref=e351]: Cluster Grand Permata Blok Ruby No 70
+            - generic [ref=e352]: Gajahan, Karanganyar, Surakarta 57716
+          - generic [ref=e357]:
+            - generic [ref=e358]: Senin - Sabtu, 08:00 - 17:00 WIB
+            - generic [ref=e359]: Jam Operasional
+      - generic [ref=e360]:
+        - iframe [ref=e362]
+        - generic [ref=e363]:
+          - heading "Produk Kami" [level=3] [ref=e364]
+          - generic [ref=e365]:
+            - link "Family Health AI health.khelmi.biz.id" [ref=e366] [cursor=pointer]:
+              - /url: https://health.khelmi.biz.id
+              - generic [ref=e371]:
+                - generic [ref=e372]: Family Health AI
+                - generic [ref=e373]: health.khelmi.biz.id
+            - link "Ahli Investasi trade.khelmi.biz.id" [ref=e376] [cursor=pointer]:
+              - /url: https://trade.khelmi.biz.id
+              - generic [ref=e381]:
+                - generic [ref=e382]: Ahli Investasi
+                - generic [ref=e383]: trade.khelmi.biz.id
+            - link "Bcompbiz Surakarta bcompbizsurakarta.com" [ref=e386] [cursor=pointer]:
+              - /url: https://bcompbizsurakarta.com
+              - generic [ref=e391]:
+                - generic [ref=e392]: Bcompbiz Surakarta
+                - generic [ref=e393]: bcompbizsurakarta.com
+  - contentinfo [ref=e396]:
+    - generic [ref=e398]:
+      - generic [ref=e399]:
+        - generic [ref=e400]: B
+        - text: Bcompbiz
+      - navigation [ref=e401]:
+        - link "Tentang" [ref=e402] [cursor=pointer]:
+          - /url: "#tentang"
+        - link "Produk" [ref=e403] [cursor=pointer]:
+          - /url: "#produk"
+        - link "Layanan" [ref=e404] [cursor=pointer]:
+          - /url: "#layanan"
+        - link "Kontak" [ref=e405] [cursor=pointer]:
+          - /url: "#kontak"
+      - generic [ref=e406]: © 2026 Bcompbiz. All rights reserved.
+  - button "Kembali ke atas" [ref=e407]

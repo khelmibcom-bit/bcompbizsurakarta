@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import TypingAnimation from "./TypingAnimation";
 
 export default function Hero() {
   const glowRef = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -12,14 +14,26 @@ export default function Hero() {
       const y = e.clientY;
       glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(99, 102, 241, 0.08), transparent 40%)`;
     };
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient mesh */}
-      <div className="absolute inset-0">
+      {/* Parallax background gradient mesh */}
+      <div
+        className="absolute inset-0"
+        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+      >
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-neon-blue/10 rounded-full blur-[120px] animate-float" />
         <div
           className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-[100px] animate-float"
@@ -31,18 +45,36 @@ export default function Hero() {
         />
       </div>
 
-      {/* Grid pattern overlay */}
+      {/* Grid pattern overlay with parallax */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(99,102,241,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.3) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
+          transform: `translateY(${scrollY * 0.1}px)`,
         }}
       />
 
       {/* Interactive glow follow cursor */}
       <div ref={glowRef} className="absolute inset-0 pointer-events-none" />
+
+      {/* Particles effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-neon-blue/20"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${6 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * -6}s`,
+              opacity: 0.2 + Math.random() * 0.3,
+            }}
+          />
+        ))}
+      </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom text-center">
@@ -58,7 +90,8 @@ export default function Hero() {
           style={{ animationDelay: "0.2s" }}
         >
           Membangun{" "}
-          <span className="gradient-text-animate">Masa Depan</span>
+          <br className="hidden sm:block" />
+          <TypingAnimation />
           <br />
           Digital
         </h1>
@@ -84,10 +117,12 @@ export default function Hero() {
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
           </a>
           <a
-            href="#tentang"
+            href="https://bcompbizsurakarta.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3.5 text-sm font-semibold text-slate-300 rounded-full glass hover:text-white hover:border-neon-blue/30 transition-all duration-300"
           >
-            Pelajari Lebih Lanjut
+            Kunjungi Website Utama
           </a>
         </div>
 
@@ -102,8 +137,8 @@ export default function Hero() {
             { value: "5.000+", label: "Unit Terpasang" },
             { value: "AI", label: "Powered Solutions" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+            <div key={stat.label} className="text-center group">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">
                 {stat.value}
               </div>
               <div className="text-xs text-slate-500">{stat.label}</div>

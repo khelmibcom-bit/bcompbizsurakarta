@@ -1,19 +1,23 @@
 import Header from "@/components/Header";
+import LoadingScreen from "@/components/LoadingScreen";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Products from "@/components/Products";
 import Services from "@/components/Services";
 import TechStack from "@/components/TechStack";
+import ClientLogos from "@/components/ClientLogos";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <Header />
       <main id="main-content">
         <Hero />
@@ -21,13 +25,15 @@ export default function Home() {
         <Products />
         <Services />
         <TechStack />
+        <ClientLogos />
         <Testimonials />
         <FAQ />
         <CTA />
         <Contact />
       </main>
       <Footer />
-      <BackToTop />
+      <FloatingWhatsApp />
+      <ScrollProgress />
     </>
   );
 }

@@ -74,7 +74,7 @@ export default function Products() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="glass-card rounded-2xl overflow-hidden"
+              className="glass-card card-3d shimmer rounded-2xl overflow-hidden"
             >
               <div className="p-8 md:p-10">
                 <div className="grid lg:grid-cols-2 gap-10">
