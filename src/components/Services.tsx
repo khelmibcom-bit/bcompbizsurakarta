@@ -27,13 +27,15 @@ export default function Services() {
           </div>
         </AnimateOnScroll>
         <div className="divider-tech mb-8" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col">
           {services.map((s, i) => (
             <AnimateOnScroll key={s.num} delay={i * 80}>
-              <div className="py-6 md:py-8 px-0 sm:px-6 lg:px-8 border-b border-r border-border [&:nth-child(3n)]:border-r-0 [&:last-child]:border-r-0 group">
-                <span className="font-mono text-sm text-accent block mb-3">{s.num}</span>
-                <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
+              <div className="flex items-start gap-6 py-6 md:py-8 border-b border-border group">
+                <span className="font-mono text-sm text-accent block w-8 flex-shrink-0 pt-0.5">{s.num}</span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
+                </div>
               </div>
             </AnimateOnScroll>
           ))}
