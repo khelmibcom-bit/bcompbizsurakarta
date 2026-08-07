@@ -52,10 +52,10 @@ export default function About() {
               <span className="gradient-text">Perangkat Lunak</span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Bcompbiz Surakarta adalah studio pengembangan perangkat lunak yang
-              berbasis di Surakarta, Indonesia. Kami berfokus pada pembuatan
-              solusi digital yang menggabungkan kecerdasan buatan dengan desain
-              yang elegan untuk mengatasi tantangan nyata.
+              Bcompbiz adalah studio pengembangan perangkat lunak dari
+              Indonesia. Kami berfokus pada pembuatan solusi digital yang
+              menggabungkan kecerdasan buatan dengan desain yang elegan untuk
+              mengatasi tantangan nyata.
             </p>
             <p className="text-slate-400 leading-relaxed mb-8">
               Dari platform kesehatan preventif hingga dashboard investasi

@@ -24,7 +24,7 @@ export default function Contact() {
 
             <div className="space-y-5">
               <a
-                href="mailto:contact@bcompbizsurakarta.com"
+                href="mailto:contact@bcompbiz.id"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 flex items-center justify-center text-neon-blue border border-neon-blue/10 group-hover:border-neon-blue/30 transition-colors">
@@ -34,7 +34,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-white group-hover:text-neon-blue transition-colors">
-                    contact@bcompbizsurakarta.com
+                    contact@bcompbiz.id
                   </div>
                   <div className="text-xs text-slate-500">Email</div>
                 </div>

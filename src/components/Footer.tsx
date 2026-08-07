@@ -13,7 +13,7 @@ export default function Footer() {
               B
             </div>
             <span className="text-sm font-semibold text-white">
-              Bcompbiz Surakarta
+              Bcompbiz
             </span>
           </div>
 
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-xs text-slate-600">
-            &copy; {currentYear} Bcompbiz Surakarta. All rights reserved.
+            &copy; {currentYear} Bcompbiz. All rights reserved.
           </div>
         </div>
       </div>

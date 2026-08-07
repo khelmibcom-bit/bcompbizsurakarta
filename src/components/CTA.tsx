@@ -37,7 +37,7 @@ export default function CTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:contact@bcompbizsurakarta.com"
+                href="mailto:contact@bcompbiz.id"
                 className="group relative px-8 py-3.5 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-neon-blue to-neon-purple hover:shadow-xl hover:shadow-neon-blue/25 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Kirim Email
