@@ -13,7 +13,7 @@ export default function CTA() {
           <h2 className="heading-xl mb-6">Punya Ide <span className="text-gradient">Proyek?</span></h2>
           <p className="text-text-secondary text-base max-w-xl mx-auto mb-8">Mari diskusikan bagaimana kami dapat membantu mewujudkan visi digital Anda.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="mailto:info@bcompbizsurakarta.com" className="btn-primary">Kirim Email</a>
+            <a href="mailto:info@bcompbizsurakarta.com" className="btn-neon">Kirim Email</a>
             <a href="https://wa.me/6281227916969" target="_blank" rel="noopener noreferrer" className="btn-outline">Chat WhatsApp</a>
           </div>
         </AnimateOnScroll>

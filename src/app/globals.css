@@ -169,6 +169,92 @@ body {
   background: rgba(79, 143, 255, 0.05);
 }
 
+/* ===== NEON BUTTON ===== */
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--color-neon-blue);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-neon-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 8px rgba(79, 143, 255, 0.3);
+}
+
+.btn-neon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(79, 143, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.btn-neon:hover::before {
+  transform: translateX(0);
+}
+
+.btn-neon:hover {
+  background: rgba(79, 143, 255, 0.1);
+  box-shadow: 0 0 15px rgba(79, 143, 255, 0.3), inset 0 0 15px rgba(79, 143, 255, 0.1);
+  text-shadow: 0 0 12px rgba(79, 143, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+/* ===== NEON TEXT EFFECT ===== */
+.neon-text {
+  color: var(--color-neon-blue);
+  text-shadow: 0 0 10px rgba(79, 143, 255, 0.5), 0 0 20px rgba(79, 143, 255, 0.3);
+}
+
+.neon-text-purple {
+  color: var(--color-neon-purple);
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== NEON BORDER EFFECT ===== */
+.neon-border {
+  border: 1px solid rgba(79, 143, 255, 0.3);
+  box-shadow: 0 0 10px rgba(79, 143, 255, 0.1), inset 0 0 10px rgba(79, 143, 255, 0.05);
+}
+
+.neon-border:hover {
+  border-color: rgba(79, 143, 255, 0.6);
+  box-shadow: 0 0 20px rgba(79, 143, 255, 0.2), inset 0 0 20px rgba(79, 143, 255, 0.1);
+}
+
+/* ===== NEON PULSE ===== */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(79, 143, 255, 0.3), 0 0 10px rgba(79, 143, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(79, 143, 255, 0.5), 0 0 20px rgba(79, 143, 255, 0.2);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* ===== NEON LINE EXPAND ===== */
+@keyframes neon-line-expand {
+  from {
+    width: 0;
+    box-shadow: 0 0 0px rgba(79, 143, 255, 0);
+  }
+  to {
+    width: 100%;
+    box-shadow: 0 0 8px rgba(79, 143, 255, 0.5);
+  }
+}
+
 /* ===== CARDS ===== */
 .card-tech {
   background: var(--color-bg-card);
@@ -191,12 +277,14 @@ body {
 }
 
 .card-tech:hover {
-  border-color: var(--color-border-light);
+  border-color: rgba(79, 143, 255, 0.3);
   background: var(--color-surface);
+  box-shadow: 0 0 20px rgba(79, 143, 255, 0.08), inset 0 0 20px rgba(79, 143, 255, 0.03);
 }
 
 .card-tech:hover::before {
   opacity: 1;
+  box-shadow: 0 0 10px rgba(79, 143, 255, 0.5);
 }
 
 /* ===== SECTION ===== */
