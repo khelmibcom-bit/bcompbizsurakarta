@@ -39,7 +39,7 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="produk" className="py-20 md:py-32 lg:py-40">
+    <section id="produk" className="py-12 md:py-20 lg:py-28">
       <div className="container-tech">
         <AnimateOnScroll>
           <div className="mb-12 md:mb-16">
@@ -51,19 +51,19 @@ export default function Products() {
         <div className="space-y-8">
           {products.map((product, i) => (
             <AnimateOnScroll key={product.name} delay={i * 150}>
-              <div className="card-tech p-6 sm:p-8 md:p-10">
-                <div className="grid lg:grid-cols-12 gap-8">
+              <div className="card-tech p-5 sm:p-6 md:p-8">
+                <div className="grid lg:grid-cols-12 gap-6">
                   <div className="lg:col-span-7">
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-3 mb-3">
                       <span className="font-mono text-sm text-accent">{product.num}</span>
                       <div className="h-px flex-1 bg-border" />
                     </div>
-                    <h3 className="heading-md mb-2">{product.name}</h3>
-                    <p className="label mb-4">{product.tagline}</p>
-                    <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-6">{product.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <h3 className="heading-md mb-1">{product.name}</h3>
+                    <p className="label mb-3">{product.tagline}</p>
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4">{product.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {product.tech.map((t) => (
-                        <span key={t} className="px-3 py-1.5 text-xs font-mono text-text-secondary border border-border rounded">
+                        <span key={t} className="px-2.5 py-1 text-xs font-mono text-text-secondary border border-border rounded">
                           {t}
                         </span>
                       ))}
@@ -76,12 +76,12 @@ export default function Products() {
                     </a>
                   </div>
                   <div className="lg:col-span-5">
-                    <h4 className="label mb-4">Fitur Utama</h4>
-                    <div className="space-y-4">
+                    <h4 className="label mb-3">Fitur Utama</h4>
+                    <div className="space-y-0">
                       {product.features.map((feature) => (
-                        <div key={feature.name} className="py-3 border-b border-border last:border-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div key={feature.name} className="py-2.5 border-b border-border last:border-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                             <span className="text-sm font-semibold text-text">{feature.name}</span>
                           </div>
                           <p className="text-xs text-text-secondary pl-3.5 leading-relaxed">{feature.desc}</p>

@@ -32,7 +32,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="container-tech relative z-10 w-full pt-28 pb-20 md:pt-40 md:pb-32">
+      <div className="container-tech relative z-10 w-full pt-24 pb-16 md:pt-32 md:pb-24">
         {/* Badge */}
         <div className="animate-slide-up mb-6">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 border border-border text-xs font-mono text-text-secondary">

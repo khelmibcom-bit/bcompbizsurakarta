@@ -4,7 +4,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function Contact() {
   return (
-    <section id="kontak" className="py-20 md:py-32 lg:py-40 bg-bg-elevated">
+    <section id="kontak" className="py-12 md:py-20 lg:py-28 bg-bg-elevated">
       <div className="container-tech">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-12">
           <AnimateOnScroll className="lg:col-span-5">

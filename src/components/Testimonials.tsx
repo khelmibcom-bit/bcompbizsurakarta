@@ -10,7 +10,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 md:py-32 lg:py-40 bg-bg-elevated">
+    <section className="py-12 md:py-20 lg:py-28 bg-bg-elevated">
       <div className="container-tech">
         <AnimateOnScroll>
           <div className="mb-12"><span className="label block mb-4">Testimoni</span><h2 className="heading-lg">Apa Kata <span className="text-gradient">Mereka</span></h2></div>

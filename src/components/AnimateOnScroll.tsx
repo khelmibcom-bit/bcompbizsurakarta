@@ -7,7 +7,6 @@ interface AnimateOnScrollProps {
   className?: string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
-  scale?: boolean;
 }
 
 export default function AnimateOnScroll({
@@ -15,7 +14,6 @@ export default function AnimateOnScroll({
   className = "",
   delay = 0,
   direction = "up",
-  scale = false,
 }: AnimateOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -24,36 +22,38 @@ export default function AnimateOnScroll({
     if (!el) return;
 
     const getTransform = () => {
-      if (scale) return "scale(0.95)";
       switch (direction) {
-        case "up": return "translateY(40px)";
-        case "down": return "translateY(-40px)";
-        case "left": return "translateX(-40px)";
-        case "right": return "translateX(40px)";
+        case "up": return "translateY(30px)";
+        case "down": return "translateY(-30px)";
+        case "left": return "translateX(-30px)";
+        case "right": return "translateX(30px)";
         case "none": return "none";
       }
     };
 
     el.style.opacity = "0";
     el.style.transform = getTransform();
-    el.style.transition = `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`;
+    el.style.transition = `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            el.style.opacity = "1";
-            el.style.transform = "none";
-            observer.unobserve(el);
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+              (entry.target as HTMLElement).style.opacity = "1";
+              (entry.target as HTMLElement).style.transform = "none";
+            }, delay);
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay, direction, scale]);
+  }, [delay, direction]);
 
   return <div ref={ref} className={className}>{children}</div>;
 }

@@ -4,7 +4,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function CTA() {
   return (
-    <section className="py-20 md:py-32 lg:py-40 relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/10 via-bg-elevated to-neon-purple/10" />
       <div className="absolute inset-0 grid-pattern opacity-50" />
       <div className="container-tech text-center relative z-10">
