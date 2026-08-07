@@ -1,157 +1,99 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import TypingAnimation from "./TypingAnimation";
+import { useEffect, useState, useRef } from "react";
 
 export default function Hero() {
-  const glowRef = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!glowRef.current) return;
-      const x = e.clientX;
-      const y = e.clientY;
-      glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(99, 102, 241, 0.08), transparent 40%)`;
-    };
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Parallax background gradient mesh */}
+    <section ref={sectionRef} className="relative min-h-screen flex items-end pb-12 sm:pb-16 md:pb-20 pt-24 md:pt-32 overflow-hidden">
+      {/* Background Letter */}
       <div
-        className="absolute inset-0"
-        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
+        style={{ transform: `translate(-50%, calc(-50% + ${scrollY * 0.08}px))` }}
       >
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-neon-blue/10 rounded-full blur-[120px] animate-float" />
-        <div
-          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-[100px] animate-float"
-          style={{ animationDelay: "-3s" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-neon-cyan/5 rounded-full blur-[80px] animate-float"
-          style={{ animationDelay: "-1.5s" }}
-        />
+        <span className="font-display text-[12rem] sm:text-[18rem] md:text-[24rem] lg:text-[30rem] font-bold text-navy/[0.03] leading-none">
+          B
+        </span>
       </div>
 
-      {/* Grid pattern overlay with parallax */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(99,102,241,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.3) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          transform: `translateY(${scrollY * 0.1}px)`,
-        }}
-      />
-
-      {/* Interactive glow follow cursor */}
-      <div ref={glowRef} className="absolute inset-0 pointer-events-none" />
-
-      {/* Particles effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-neon-blue/20"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${6 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * -6}s`,
-              opacity: 0.2 + Math.random() * 0.3,
-            }}
-          />
-        ))}
+      {/* Grid Lines */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-border/40" />
+        <div className="absolute top-0 left-2/4 w-px h-full bg-border/40" />
+        <div className="absolute top-0 left-3/4 w-px h-full bg-border/40" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container-custom text-center">
-        <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium glass text-slate-300 mb-8">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+      <div className="container-editorial relative z-10 w-full">
+        {/* Top Label */}
+        <div className="mb-8 md:mb-12 animate-fade-up">
+          <span className="label-editorial">
             Software Development Studio &middot; Surakarta, Indonesia
           </span>
         </div>
 
-        <h1
-          className="animate-slide-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
-          style={{ animationDelay: "0.2s" }}
-        >
-          Membangun{" "}
-          <br className="hidden sm:block" />
-          <TypingAnimation />
-          <br />
-          Digital
-        </h1>
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-12 gap-6 md:gap-8 items-end">
+          {/* Headline */}
+          <div className="lg:col-span-7 xl:col-span-8">
+            <h1 className="font-display text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] font-bold text-navy leading-[0.92] tracking-tight animate-fade-up">
+              Membangun
+              <br />
+              <span className="italic text-gold">Masa Depan</span>
+              <br />
+              Digital
+            </h1>
+            <div className="mt-6 md:mt-8 h-px bg-gold animate-fade-up" style={{ animationDelay: "0.3s", width: "80px", maxWidth: "120px" }} />
+          </div>
 
-        <p
-          className="animate-slide-up max-w-2xl mx-auto text-base sm:text-lg text-slate-400 leading-relaxed mb-10"
-          style={{ animationDelay: "0.3s" }}
-        >
-          Kami merancang dan membangun solusi perangkat lunak inovatif yang
-          memberdayakan bisnis dan individu. Dari kecerdasan buatan hingga
-          aplikasi web modern, kami wujudkan visi digital Anda.
-        </p>
-
-        <div
-          className="animate-slide-up flex flex-col sm:flex-row items-center justify-center gap-4"
-          style={{ animationDelay: "0.4s" }}
-        >
-          <a
-            href="#produk"
-            className="group relative px-8 py-3.5 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-neon-blue to-neon-purple hover:shadow-xl hover:shadow-neon-blue/25 transition-all duration-300 hover:-translate-y-0.5"
-          >
-            Lihat Produk Kami
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
-          </a>
-          <a
-            href="https://bcompbizsurakarta.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3.5 text-sm font-semibold text-slate-300 rounded-full glass hover:text-white hover:border-neon-blue/30 transition-all duration-300"
-          >
-            Kunjungi Website Utama
-          </a>
+          {/* Description + CTA */}
+          <div className="lg:col-span-5 xl:col-span-4 mt-6 lg:mt-0">
+            <p className="text-warm-gray text-sm sm:text-base leading-relaxed mb-6 md:mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              Kami merancang dan membangun solusi perangkat lunak inovatif
+              yang memberdayakan bisnis dan individu. Dari kecerdasan buatan
+              hingga aplikasi web modern.
+            </p>
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+              <a href="#produk" className="btn-editorial justify-center sm:justify-start">
+                Lihat Produk
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+              </a>
+              <a href="https://bcompbizsurakarta.com" target="_blank" rel="noopener noreferrer" className="btn-editorial-outline justify-center sm:justify-start">
+                Website Utama
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Stats */}
-        <div
-          className="animate-slide-up mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
-          style={{ animationDelay: "0.5s" }}
-        >
+        <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-border grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
           {[
             { value: "24+", label: "Tahun Pengalaman" },
             { value: "1.500+", label: "Klien Puas" },
             { value: "5.000+", label: "Unit Terpasang" },
             { value: "AI", label: "Powered Solutions" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center group">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">
-                {stat.value}
-              </div>
-              <div className="text-xs text-slate-500">{stat.label}</div>
+            <div key={stat.label}>
+              <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-1">{stat.value}</div>
+              <div className="label-editorial text-[10px] md:text-xs">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-slate-600 flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-3 rounded-full bg-neon-blue animate-pulse" />
-        </div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span className="label-editorial text-[9px] md:text-[10px]">Scroll</span>
+        <div className="w-px h-8 md:h-12 bg-gradient-to-b from-navy to-transparent animate-pulse" />
       </div>
     </section>
   );

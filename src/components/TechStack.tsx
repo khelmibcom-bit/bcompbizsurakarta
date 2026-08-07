@@ -8,13 +8,11 @@ const techStack = [
   { name: "Prisma", category: "ORM" },
   { name: "PostgreSQL", category: "Database" },
   { name: "Neon", category: "Serverless DB" },
-  { name: "NextAuth", category: "Authentication" },
-  { name: "Vercel", category: "Deployment" },
+  { name: "NextAuth", category: "Auth" },
   { name: "PM2", category: "Process Manager" },
   { name: "Capacitor", category: "Mobile" },
   { name: "Zod", category: "Validation" },
   { name: "Vitest", category: "Testing" },
-  { name: "Playwright", category: "E2E Testing" },
   { name: "Gemini AI", category: "AI Engine" },
   { name: "Claude AI", category: "AI Engine" },
   { name: "OpenAI", category: "AI Engine" },
@@ -23,32 +21,25 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section className="section-spacing relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-purple/20 to-transparent" />
-
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold tracking-widest text-neon-purple uppercase mb-4">
-            Tech Stack
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Teknologi yang{" "}
-            <span className="gradient-text">Kami Gunakan</span>
+    <section className="section-editorial">
+      <div className="container-editorial">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="label-editorial block mb-4">Tech Stack</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-navy">
+            Teknologi yang <span className="italic text-gold">Kami Gunakan</span>
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="glass-card rounded-full px-5 py-2.5 flex items-center gap-2"
+              className="px-4 md:px-6 py-2.5 md:py-3 border border-border bg-white hover:border-gold hover:bg-cream-dark transition-all duration-300 group"
             >
-              <span className="text-sm font-medium text-white">
+              <span className="text-sm font-medium text-navy group-hover:text-gold transition-colors">
                 {tech.name}
               </span>
-              <span className="text-xs text-slate-500">
-                {tech.category}
-              </span>
+              <span className="text-xs text-warm-gray ml-2">{tech.category}</span>
             </div>
           ))}
         </div>

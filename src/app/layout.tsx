@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-display",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev.khelmi.biz.id"),
   title: "Bcompbiz | Software Development Studio",
   description:
-    "Studio pengembangan perangkat lunak dari Indonesia. Membangun solusi digital inovatif berbasis AI untuk masa depan. Spesialis web app, mobile, dan AI integration.",
+    "Studio pengembangan perangkat lunak premium dari Indonesia. Membangun solusi digital inovatif berbasis AI untuk masa depan.",
   keywords: [
     "software development",
     "web development",
@@ -20,16 +33,13 @@ export const metadata: Metadata = {
     "bcompbiz",
     "indonesia",
     "software studio",
-    "Next.js",
-    "React",
-    "TypeScript",
   ],
   authors: [{ name: "Bcompbiz" }],
   creator: "Bcompbiz",
   openGraph: {
     title: "Bcompbiz | Software Development Studio",
     description:
-      "Studio pengembangan perangkat lunak dari Indonesia. Membangun solusi digital inovatif berbasis AI.",
+      "Studio pengembangan perangkat lunak premium dari Indonesia.",
     url: "https://dev.khelmi.biz.id",
     siteName: "Bcompbiz",
     locale: "id_ID",
@@ -39,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bcompbiz | Software Development Studio",
     description:
-      "Studio pengembangan perangkat lunak dari Indonesia. Membangun solusi digital inovatif berbasis AI.",
+      "Studio pengembangan perangkat lunak premium dari Indonesia.",
   },
   robots: {
     index: true,
@@ -64,7 +74,7 @@ const jsonLd = {
   alternateName: "Bcompbiz Surakarta",
   url: "https://dev.khelmi.biz.id",
   description:
-    "Perusahaan teknologi dari Surakarta. Spesialis AI, web app, dan mobile development. Berdiri sejak 2000.",
+    "Studio pengembangan perangkat lunak premium dari Indonesia. Spesialis AI, web app, dan mobile development.",
   telephone: "+6281227916969",
   email: "info@bcompbizsurakarta.com",
   foundingDate: "2000",
@@ -90,8 +100,6 @@ const jsonLd = {
         name: "Family Health AI",
         url: "https://health.khelmi.biz.id",
         applicationCategory: "HealthApplication",
-        description:
-          "Platform kesehatan preventif berbasis AI untuk memantau dan menganalisis kesehatan keluarga.",
       },
     },
     {
@@ -101,8 +109,6 @@ const jsonLd = {
         name: "Ahli Investasi",
         url: "https://trade.khelmi.biz.id",
         applicationCategory: "FinanceApplication",
-        description:
-          "Dashboard investasi real-time dengan multi-AI untuk analisis kripto dan saham.",
       },
     },
   ],
@@ -114,7 +120,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`dark ${inter.variable}`}>
+    <html
+      lang="id"
+      className={`${playfair.variable} ${dmSans.variable} ${jetbrains.variable}`}
+    >
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
@@ -122,10 +131,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-dark-950 text-slate-200 antialiased font-sans">
+      <body className="min-h-screen bg-cream text-charcoal font-body antialiased">
+        <div className="noise-overlay" />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-neon-blue focus:text-white focus:rounded-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy focus:text-white"
         >
           Langsung ke konten utama
         </a>
