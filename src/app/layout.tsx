@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -15,7 +15,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dev.khelmi.biz.id"),
+  metadataBase: new URL("https://khelmi.biz.id"),
   title: "Bcompbiz | Software Development Studio",
   description:
     "Studio pengembangan perangkat lunak premium dari Indonesia. Membangun solusi digital inovatif berbasis AI untuk masa depan.",
@@ -24,22 +24,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bcompbiz | Software Development Studio",
     description: "Studio pengembangan perangkat lunak premium dari Indonesia.",
-    url: "https://dev.khelmi.biz.id",
+    url: "https://khelmi.biz.id",
     siteName: "Bcompbiz",
     locale: "id_ID",
     type: "website",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://dev.khelmi.biz.id" },
+  alternates: { canonical: "https://khelmi.biz.id" },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Bcompbiz",
-  url: "https://dev.khelmi.biz.id",
+  url: "https://khelmi.biz.id",
   telephone: "+6281227916969",
-  email: "info@bcompbizsurakarta.com",
+  email: "cs@bcomp-online.id",
   foundingDate: "2000",
   address: {
     "@type": "PostalAddress",
@@ -48,12 +48,12 @@ const jsonLd = {
     addressRegion: "Surakarta",
     addressCountry: "ID",
   },
-  sameAs: ["https://bcompbizsurakarta.com"],
+  sameAs: ["https://bcomp-online.id"],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${outfit.variable} ${jetbrains.variable}`}>
+    <html lang="id" className={`${bricolage.variable} ${jetbrains.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

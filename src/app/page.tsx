@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import LoadingScreen from "@/components/LoadingScreen";
+import ScrollBackground from "@/components/ScrollBackground";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Products from "@/components/Products";
@@ -18,8 +19,9 @@ export default function Home() {
   return (
     <>
       <LoadingScreen />
+      <ScrollBackground />
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="relative z-10">
         <Hero />
         <About />
         <Products />

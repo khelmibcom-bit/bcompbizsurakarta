@@ -9,16 +9,30 @@ const products = [
     tagline: "Platform Kesehatan Preventif Berbasis AI",
     description: "Platform kesehatan preventif personal yang menggunakan kecerdasan buatan untuk memantau, menganalisis, dan memberikan rekomendasi kesehatan proaktif untuk seluruh keluarga.",
     url: "https://health.khelmi.biz.id",
-    features: ["Health Score real-time", "Analisis lab via OCR", "Deteksi risiko dini", "AI Chat konsultasi", "Tren kesehatan bulanan", "Daily briefing otomatis"],
+    features: [
+      { name: "Habits OS", desc: "Sistem manajemen kebiasaan harian untuk membentuk pola hidup sehat yang berkelanjutan" },
+      { name: "Analisis Lab (OCR)", desc: "Upload hasil lab, sistem ekstrak dan analisis data secara otomatis dengan AI" },
+      { name: "Body Composition (BMI)", desc: "Analisis komposisi tubuh meliputi BMI, body fat, massa otot, dan visceral fat" },
+      { name: "Health Score Real-time", desc: "Skor kesehatan 0-100 dengan penjelasan kontributor positif dan negatif" },
+      { name: "Deteksi Risiko Dini", desc: "Sistem peringatan dini untuk risiko kardiovaskular, metabolik, dan lainnya" },
+      { name: "AI Chat Konsultasi", desc: "Tanya AI kapan saja untuk rekomendasi kesehatan personal" },
+    ],
     tech: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "AI/ML"],
   },
   {
     num: "02",
     name: "Ahli Investasi",
     tagline: "Dashboard Investasi Real-Time dengan Multi-AI",
-    description: "Platform dashboard investasi cerdas yang mengorkestrasi multiple AI engine untuk analisis pasar kripto dan saham secara real-time.",
+    description: "Platform dashboard investasi cerdas yang mengorkestrasi multiple AI engine untuk analisis pasar kripto, saham IDX, US Stock, dan emas secara real-time untuk trading dan investasi jangka panjang.",
     url: "https://trade.khelmi.biz.id",
-    features: ["Multi-AI consensus", "Dashboard kripto & saham", "Portfolio Doctor", "Trading Journal", "Backtesting", "Position Sizing"],
+    features: [
+      { name: "Portfolio Doctor", desc: "Diagnosa kesehatan portofolio dengan analisis diversifikasi, HHI, dan risk score" },
+      { name: "AI Analyze", desc: "Analisis mendalam dari 4 AI engine (Gemini, Claude, OpenAI, Grok) dengan consensus voting" },
+      { name: "Trade Mentor", desc: "Edukasi trading personal dengan rekomendasi entry/exit berbasis AI" },
+      { name: "Full Stack Support", desc: "Dukungan penuh untuk Kripto, Saham IDX, US Stock, dan Emas" },
+      { name: "Trading & Investasi", desc: "Analisis untuk trading jangka pendek dan investasi jangka panjang" },
+      { name: "Market Timing Agent", desc: "Rekomendasi timing Entry/Wait/DCA berbasis analisis teknikal dan sentimen" },
+    ],
     tech: ["Next.js 16", "TypeScript", "Prisma", "Neon", "Capacitor"],
   },
 ];
@@ -63,11 +77,14 @@ export default function Products() {
                   </div>
                   <div className="lg:col-span-5">
                     <h4 className="label mb-4">Fitur Utama</h4>
-                    <div className="space-y-0">
+                    <div className="space-y-4">
                       {product.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-3 py-3 border-b border-border last:border-0">
-                          <span className="w-1 h-1 rounded-full bg-accent" />
-                          <span className="text-sm text-text">{feature}</span>
+                        <div key={feature.name} className="py-3 border-b border-border last:border-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            <span className="text-sm font-semibold text-text">{feature.name}</span>
+                          </div>
+                          <p className="text-xs text-text-secondary pl-3.5 leading-relaxed">{feature.desc}</p>
                         </div>
                       ))}
                     </div>
