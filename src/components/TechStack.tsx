@@ -10,7 +10,7 @@ const tech = [
 
 export default function TechStack() {
   return (
-    <section className="section-tech">
+    <section className="py-20 md:py-32 lg:py-40">
       <div className="container-tech">
         <div className="text-center mb-12">
           <span className="label block mb-4">Tech Stack</span>

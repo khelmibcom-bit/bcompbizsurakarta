@@ -8,7 +8,7 @@ const values = [
 
 export default function About() {
   return (
-    <section id="tentang" className="section-tech bg-bg-elevated">
+    <section id="tentang" className="py-20 md:py-32 lg:py-40 bg-bg-elevated">
       <div className="container-tech">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-5">

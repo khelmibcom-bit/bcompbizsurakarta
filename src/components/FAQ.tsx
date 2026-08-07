@@ -13,7 +13,7 @@ const faqs = [
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="section-tech">
+    <section className="py-20 md:py-32 lg:py-40">
       <div className="container-tech">
         <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-4">

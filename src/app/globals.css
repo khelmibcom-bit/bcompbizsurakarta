@@ -204,21 +204,7 @@ body {
 }
 
 /* ===== SECTION ===== */
-.section-tech {
-  padding: 5rem 0;
-}
-
-@media (min-width: 768px) {
-  .section-tech {
-    padding: 8rem 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-tech {
-    padding: 10rem 0;
-  }
-}
+/* Using Tailwind classes instead: py-20 md:py-32 lg:py-40 */
 
 /* ===== DIVIDER ===== */
 .divider-tech {

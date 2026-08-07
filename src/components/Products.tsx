@@ -23,7 +23,7 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="produk" className="section-tech">
+    <section id="produk" className="py-20 md:py-32 lg:py-40">
       <div className="container-tech">
         <div className="mb-12 md:mb-16">
           <span className="label block mb-4">Produk Kami</span>
