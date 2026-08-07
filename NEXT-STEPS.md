@@ -71,16 +71,9 @@ mkdir -p /www/wwwroot/bcompbizsurakarta.com
 
 ```bash
 # Opsi A: Git (rekomendasi)
-# Di lokal:
-git init
-git add .
-git commit -m "feat: initial landing page"
-git remote add origin YOUR_REPO_URL
-git push -u origin main
-
 # Di VPS:
 cd /www/wwwroot/bcompbizsurakarta.com
-git clone YOUR_REPO_URL .
+git clone https://github.com/khelmibcom-bit/bcompbizsurakarta.git .
 ```
 
 ```bash
