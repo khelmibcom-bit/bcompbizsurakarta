@@ -3,12 +3,12 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const services = [
-  { num: "01", title: "Kecerdasan Buatan", desc: "Integrasi AI untuk analisis data, prediksi, dan automasi." },
-  { num: "02", title: "Web Application", desc: "Aplikasi web modern Next.js, React, TypeScript." },
-  { num: "03", title: "Mobile Development", desc: "Aplikasi mobile cross-platform dengan Capacitor." },
-  { num: "04", title: "Database & Backend", desc: "Arsitektur backend robust PostgreSQL, Prisma, Neon." },
-  { num: "05", title: "Performa & Optimasi", desc: "Core Web Vitals optimal, lazy loading, caching." },
-  { num: "06", title: "Keamanan", desc: "Autentikasi JWT, rate limiting, security headers." },
+  { num: "01", title: "Kecerdasan Buatan", desc: "Integrasi AI untuk analisis data, prediksi, dan automasi. Mendukung Gemini, Claude, OpenAI, Grok." },
+  { num: "02", title: "Web Application", desc: "Aplikasi web modern dengan Next.js, React, TypeScript. SSR, performa optimal, SEO-friendly." },
+  { num: "03", title: "Mobile Development", desc: "Aplikasi mobile cross-platform dengan Capacitor. Deploy ke Play Store dan App Store." },
+  { num: "04", title: "Database & Backend", desc: "Arsitektur backend robust dengan PostgreSQL, Prisma ORM, dan Neon serverless." },
+  { num: "05", title: "Performa & Optimasi", desc: "Core Web Vitals optimal, lazy loading, caching strategy, dan CDN." },
+  { num: "06", title: "Keamanan", desc: "Autentikasi JWT, rate limiting, input validation, dan security headers." },
 ];
 
 export default function Services() {
@@ -27,15 +27,13 @@ export default function Services() {
           </div>
         </AnimateOnScroll>
         <div className="divider-tech mb-8" />
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-border">
           {services.map((s, i) => (
             <AnimateOnScroll key={s.num} delay={i * 80}>
-              <div className="flex items-start gap-6 py-6 md:py-8 border-b border-border group">
-                <span className="font-mono text-sm text-accent block w-8 flex-shrink-0 pt-0.5">{s.num}</span>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
-                </div>
+              <div className="p-6 md:p-8 border-b border-r border-border group h-full">
+                <span className="font-mono text-sm text-accent block mb-3">{s.num}</span>
+                <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
               </div>
             </AnimateOnScroll>
           ))}
