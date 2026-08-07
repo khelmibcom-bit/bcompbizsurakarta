@@ -31,7 +31,7 @@ export default function Services() {
           {services.map((s, i) => (
             <AnimateOnScroll key={s.num} delay={i * 80}>
               <div className="py-6 md:py-8 border-b border-border sm:border-r sm:last:border-r-0 sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 px-0 sm:px-6 lg:px-8 group">
-                <span className="font-mono text-sm text-accent block mb-3">{s.num}</span>
+                <span className="font-mono text-sm text-accent block mb-3 w-8">{s.num}</span>
                 <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
               </div>
