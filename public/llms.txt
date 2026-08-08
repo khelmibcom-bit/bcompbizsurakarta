@@ -1,0 +1,23 @@
+# Bcompbiz
+
+> Studio software development dari Surakarta, Indonesia. Spesialis AI, web app, dan mobile development.
+
+## Tentang
+
+Bcompbiz adalah perusahaan teknologi yang berdiri sejak tahun 2000. Melayani 1.500+ klien dengan 5.000+ unit produk terpasang. Berlokasi di Karanganyar, Surakarta, Jawa Tengah.
+
+## Produk
+
+- **Family Health AI** (https://health.khelmi.biz.id) — Platform kesehatan preventif berbasis AI dengan fitur Habits OS, analisis lab (OCR), Body Composition (BMI), Health Score real-time.
+- **Ahli Investasi** (https://trade.khelmi.biz.id) — Dashboard investasi real-time dengan multi-AI (Gemini, Claude, OpenAI, Grok). Mendukung kripto, saham IDX, US Stock, dan emas.
+
+## Teknologi
+
+Next.js, React, TypeScript, Tailwind CSS, Prisma ORM, PostgreSQL, Neon, Capacitor, Gemini AI, Claude AI, OpenAI, Grok.
+
+## Kontak
+
+- WhatsApp: +6281227916969
+- Email: cs@bcomp-online.id
+- Website: https://bcomp-online.id
+- Lokasi: Karanganyar, Surakarta, Indonesia

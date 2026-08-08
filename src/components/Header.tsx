@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { href: "#tentang", label: "Tentang" },
-  { href: "#produk", label: "Produk" },
-  { href: "#layanan", label: "Layanan" },
-  { href: "#kontak", label: "Kontak" },
+  { href: "/tentang", label: "Tentang" },
+  { href: "/produk", label: "Produk" },
+  { href: "/#layanan", label: "Layanan" },
+  { href: "/kontak", label: "Kontak" },
 ];
 
 export default function Header() {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://khelmi.biz.id"),
   title: "Bcompbiz | Software Development Studio",
   description:
-    "Studio pengembangan perangkat lunak premium dari Indonesia. Membangun solusi digital inovatif berbasis AI untuk masa depan. Spesialis web app, mobile, dan AI integration.",
+    "Bcompbiz — Studio software development Indonesia. Bangun aplikasi AI, web & mobile dengan teknologi Next.js, React, TypeScript. Konsultasi gratis: 0812-2791-6969.",
   keywords: ["software development", "web development", "AI", "mobile app", "bcompbiz", "indonesia", "surakarta", "solo", "Next.js", "React", "TypeScript"],
   authors: [{ name: "Bcompbiz" }],
   openGraph: {
