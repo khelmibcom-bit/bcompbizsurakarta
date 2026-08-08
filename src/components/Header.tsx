@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
+  { href: "/", label: "Beranda" },
   { href: "/tentang", label: "Tentang" },
   { href: "/produk", label: "Produk" },
-  { href: "/#layanan", label: "Layanan" },
+  { href: "/layanan", label: "Layanan" },
   { href: "/kontak", label: "Kontak" },
 ];
 
