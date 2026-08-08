@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dev.khelmi.biz.id/sitemap.xml",
+    sitemap: "https://khelmi.biz.id/sitemap.xml",
   };
 }
